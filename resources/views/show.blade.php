@@ -7,17 +7,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Timeline</h1>
-        <div class='posts'>
-            @foreach ($posts as $post)
-                <div class='post'>
+        <div class='post'>
                     <h2 class='title'>{{ $post->title }}</h2>
                     <p class='content'>{{ $post->content }}<br>{{ $post->image }}<br>{{ $post->good}}</p>
-                </div>
-            @endforeach
+                    <p class='updated_at'>{{ $post->updated_at }}</p>
         </div>
-        <div class='paginate'>
-            {{ $posts->links() }}
-        </div>
+        <div class='back'>[<a href="/">Back</a>]</div>
     </body>
 </html>
