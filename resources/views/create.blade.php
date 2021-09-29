@@ -17,8 +17,8 @@
             </div>
             <div class="content">
                 <h2>Body</h2>
-                <textarea name="post[body]" placeholder="投稿記入"></textarea>
-                 <p class="body__error" style="color:red">{{ $errors->first('post.body') }}</p>
+                <textarea name="post[content]" placeholder="投稿記入"></textarea>
+                 <p class="content__error" style="color:red">{{ $errors->first('post.content') }}</p>
             </div>
             <input type="submit" value="投稿[Post]"/>
         </form>

@@ -17,7 +17,7 @@
             </div>
             <div class="body">
                 <h2>Body</h2>
-                <textarea name="post[body]" placeholder="投稿記入">{{ $post->content }}</textarea>
+                <textarea name="post[content]" placeholder="投稿記入">{{ $post->content }}</textarea>
             </div>
             <input type="submit" value="更新[Update]"/>
         </form>

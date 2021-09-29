@@ -16,7 +16,7 @@ class CommentsTableSeeder extends Seeder
             DB::table('comments')->insert([
                 'title' => "testタイトル{$x}",
                 'content' => "sample文{$x}",
-                'image' => "{$x}",
+                'image_path' => "{$x}",
                 'user_id' => "{$x}",
                 'post_id' => "{$x}",
                 'good' => "{$x}",

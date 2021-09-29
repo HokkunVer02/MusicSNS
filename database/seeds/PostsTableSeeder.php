@@ -16,7 +16,7 @@ class PostsTableSeeder extends Seeder
             DB::table('posts')->insert([
                 'title' => "テストタイトル{$x}",
                 'content' => "サンプル文{$x}",
-                'image' => "{$x}",
+                'image_path' => "{$x}",
                 'user_id' => "{$x}",
                 'good' => "{$x}",
                 'created_at' => Carbon::now(),
