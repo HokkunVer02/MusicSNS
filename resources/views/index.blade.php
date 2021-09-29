@@ -2,17 +2,17 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <title>♪ My World Of Music ♪</title>
+        <title>♪ My MusicFes ♪</title>
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
         <h1>Timeline</h1>
         <div class='posts'>
             @foreach ($posts as $post)
                 <div class='post'>
-                    <h2 class='title'>{{ $post->title }}</h2>
-                    <p class='content'>{{ $post->content }}<br>{{ $post->image }}<br>{{ $post->good}}</p>
+                    <h2 class='title'>[<a href="/posts/{{ $post->id }}">{{ $post->title }}</a>]</h2>
+                    <p class='body'>{{ $post->content }}<br>{{ $post->image }}<br>{{ $post->good }}</p></p>
                 </div>
             @endforeach
         </div>
