@@ -8,11 +8,12 @@
     </head>
     <body>
         <h1>Timeline</h1>
+        <p class='create'>[<a href="/posts/create">新規投稿[New Post]</a>]</p>
         <div class='posts'>
             @foreach ($posts as $post)
                 <div class='post'>
                     <h2 class='title'>[<a href="/posts/{{ $post->id }}">{{ $post->title }}</a>]</h2>
-                    <p class='body'>{{ $post->content }}<br>{{ $post->image }}<br>{{ $post->good }}</p></p>
+                    <p class='body'>{{ $post->content }}<br>{{ $post->image }}<br>{{ $post->good}}</p>
                 </div>
             @endforeach
         </div>
