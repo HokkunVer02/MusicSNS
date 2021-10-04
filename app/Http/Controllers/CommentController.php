@@ -11,4 +11,9 @@ class CommentController extends Controller
     {
         return view('commentindex')->with(['comments' => $comment->getPaginateByLimit()]);
     }
+    
+    public function show(Comment $comment)
+    {
+        return view ('commentshow')->with(['comment' => $comment]);
+    }
 }

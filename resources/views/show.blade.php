@@ -20,7 +20,7 @@
             <p class='body'>{{ $post->content }}<br>{{ $post->image_path }}<br>{{ $post->good }}</p>
             <p class='updated_at'>{{ $post->updated_at }}</p>
         </div>
-        <div class='back'>[<a href='/'>Back</a>]</div>
+        <div class='back'>[<a href='/'>戻る[Back]</a>]</div>
         <script>
             function deletePost(e){
                 'use strict';

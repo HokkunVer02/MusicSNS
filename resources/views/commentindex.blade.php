@@ -10,9 +10,9 @@
         <h1>コメント一覧</h1>
         <div class='comments'>
             @foreach($comments as $comment)
-            <div class='post'>
-                <h2 class='title'>{{ $comment->title }}</h2>
-                <p class='body'>{{ $comment->content }}</p>
+            <div class='comment'>
+                <h2 class='title'>[<a href="/comments/{{ $comment->id }}">{{ $comment->title }}</a>]</h2>
+                <p class='body'>{{ $comment->content }}<br>画像{{ $comment->image_path }}<br>ユーザーID：{{ $comment->user_id }}<br>投稿ID：{{ $comment->post_id }}<br>高評価数：{{ $comment->good }}</p>
             </div>
             @endforeach
         </div>
