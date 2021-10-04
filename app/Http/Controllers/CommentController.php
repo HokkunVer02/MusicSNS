@@ -9,6 +9,6 @@ class CommentController extends Controller
 {
     public function index(Comment $comment)
     {
-        return $comment->get();
+        return view('commentindex')->with(['comments' => $comment->getPaginateByLimit()]);
     }
 }
