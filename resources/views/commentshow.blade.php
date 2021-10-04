@@ -8,7 +8,7 @@
     </head>
     <body>
         <h1>コメント詳細</h1>
-            <div class='post'>
+            <div class='comment'>
                 <h2 class='title'>{{ $comment->title }}</h2>
                 <p class='body'>{{ $comment->content }}<br>{{ $comment->image_path }}<br>{{ $comment->good }}</p>
                 <p class='updated_at'>{{ $comment->updated_at }}</p>
