@@ -20,3 +20,6 @@ Route::put('/posts/{post}', 'PostController@update');
 Route::delete('/posts/{post}', 'PostController@destroy');
 Route::get('/posts/{post}', 'PostController@show');
 Route::post('/posts', 'PostController@store');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
