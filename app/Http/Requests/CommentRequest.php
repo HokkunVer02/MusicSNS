@@ -6,13 +6,13 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class CommentRequest extends FormRequest
 {
+    public function rules()
+    {
     /**
      * Get the validation rules that apply to the request.
      *
      * @return array
      */
-    public function rules()
-    {
         return [
             'post.title' => 'required|string|max:100',
             'post.content' => 'required|string|max:4000',
