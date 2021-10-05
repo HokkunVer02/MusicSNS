@@ -8,7 +8,7 @@
     </head>
     <body>
         <h1>コメント一覧</h1>
-        <p class='create'>[<a href='/comments/create'>create</a>]</p>
+        <p class='create'>[<a href='/comments/create'>コメント投稿[CommentPost]</a>]</p>
         <div class='comments'>
             @foreach($comments as $comment)
             <div class='comment'>

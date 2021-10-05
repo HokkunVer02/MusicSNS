@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>♪ My MusicFes ♪</title>
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
         <h1>コメント作成</h1>
@@ -10,15 +12,15 @@
             {{ csrf_field() }}
             <div class="title">
                 <h2>Title</h2>
-            <input type="text" name="comment[title]" placeholder="タイトル" value="{{ old('comment.title') }}"/>
-            <p class="title__error" style="color:red">{{ $errors->first('comment.title') }}</p>
+                <input type="text" name="comment[title]" placeholder="タイトル" value="{{ old('comment.title') }}"/>
+                <p class="title__error" style="color:red">{{ $errors->first('comment.title') }}</p>
             </div>
             <div class="content">
                 <h2>Body</h2>
-                <textarea name="comment[content]" placeholder="コメント記入"></textarea>
+                <textarea name="comment[content]" placeholder="コメント記入">{{ old('comment.content') }}</textarea>
                 <p class="content__error" style="color:red">{{ $errors->first('comment.content') }}</p>
             </div>
-            <input type="submit"　value="投稿[Post]"/>
+            <input type="submit" value="投稿[Post]"/>
         </form>
         <div class='back'>[<a href='/comments'>戻る[Back]</a>]</div>
     </body>

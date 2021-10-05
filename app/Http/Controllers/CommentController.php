@@ -2,32 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
 use App\Comment;
 use App\Http\Requests\CommentRequest;
-use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
     public function index(Comment $comment)
     {
-        return view('commentindex')->with(['comments' => $comment->getPaginateByLimit()]);
+        return view('comment.index')->with(['comments' => $comment->getPaginateByLimit()]);
     }
     
     public function show(Comment $comment)
     {
-        return view('commentshow')->with(['comment' => $comment]);
+        return view('comment.show')->with(['comment' => $comment]);
     }
     
     public function create()
     {
-        return view('commentcreate');
+        return view('comment.create');
     }
     
-    public function store(CommentRequest $request, Comment $comment)
+    public function store(Comment $comment, CommentRequest $request)
     {
         $input = $request['comment'];
         $comment->fill($input)->save();
         return redirect('/comments/' . $comment->id);
     }
+
 }

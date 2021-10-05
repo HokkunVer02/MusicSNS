@@ -21,6 +21,6 @@
             </div>
             <input type="submit" value="更新[Update]"/>
         </form>
-        <div class='back'>[<a href='/'>Back</a>]</div>
+        <div class='back'>[<a href='/'>戻る[Back]</a>]</div>
     </body>
 </html>
