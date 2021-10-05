@@ -8,11 +8,12 @@
     </head>
     <body>
         <h1>コメント詳細</h1>
-            <div class='comment'>
-                <h2 class='title'>{{ $comment->title }}</h2>
-                <p class='body'>{{ $comment->content }}<br>{{ $comment->image_path }}<br>{{ $comment->good }}</p>
-                <p class='updated_at'>{{ $comment->updated_at }}</p>
-            </div>
+        <p class="edit">[<a href="/comments/{{ $comment->id }}/edit">編集[Edit]</a>]</p>
+        <div class='comment'>
+            <h2 class='title'>{{ $comment->title }}</h2>
+            <p class='body'>{{ $comment->content }}<br>{{ $comment->image_path }}<br>{{ $comment->good }}</p>
+            <p class='updated_at'>{{ $comment->updated_at }}</p>
+        </div>
         <div class='back'>[<a href='/comments'>戻る[Back]</a>]</div>
     </body>
 </html>
